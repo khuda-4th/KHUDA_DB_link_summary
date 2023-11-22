@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+html {
+    background: #EBEBEB;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.page {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+header > h1 {
+	margin-left:20px;
+    font-size: 38px;
+}
+
+header > h3 {
+	margin-right:20px;
+    color: #484848;
+    font-size: 18px;
+}
+
+/*버튼디자인!!*/
+.taglist {
+    padding-top: 1em;
+    margin-top: 1em;
+    margin: 10px 30px 30px 30px;
+    background-color: lightgray;
+    border-top: 
+      solid
+      1px
+      #CCC;
+  }
+
+.keylist {
+    background-color: rgb(153, 64, 64);
+    padding: 20px;
+    border: 1px solid #000;
+    height: 600%;
+}
+.articleTitle {
+    font-size: 1.15em;
+    font-weight: 700;
+    line-height: 1em;
+    color: #222;
+}
+
+a.button {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    float: left;
+    width: 120px;
+    padding: 5px 25px; /* 버튼 내부 여백 설정 */
+    margin: 10px 20px 10px 0;
+    text-align: center;
+    width: auto;
+    font-weight: 600;
+    line-height: 40px;
+    color: #434342;
+    border-radius: 20px;
+    transition: all 0.2s ;
+  }
+
+.btn {
+    background: #ffffff;
+  }
+
+/* BORDER */
+.btn.btnBorder {
+    box-shadow: 0px 0px 0px 0px #ffffff;
+  }
+
+.btn.btnBorder:hover {
+box-shadow: 0px 0px 0px 5px #ffffff;
+}
+
+/*링크 디자인!!*/
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 284px;
+    flex-shrink: 0;
+    background: #D9D9D9; /* 회색 배경색 */
+    float:left;
+
+}
+
+.photo {
+    display: inline-block; /* 가로로 나열하기 위해 block레벨 요소를 inline-block레벨로 전환 */
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 304px;
+    height: 113px;
+    border-radius: 10px 10px 0px 0px;
+    background: #B7B7B7;
+}
+
+.contents {
+    width: 304px;
+    height: 107px;
+    position: relative;
+    left: 10px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 10px 10px;
+    background: #FFF;
+}
+
+.tags {
+    display: flex;
+    width: 304px;
+    height: 34px;
+    position: relative;
+    left: 10px;
+    margin: 10px 0;
+    
+}
+
+.rounded-box {
+    width: auto;
+    height: 26px;
+    padding: 5px 25px;
+    margin: 10px 20px 10px 0;
+    transition: all 0.2s ;
+    flex-shrink: 0;
+    border-radius: 57px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    color: #000000; /* 텍스트 색상 */
+    font-weight: bold;
+}
