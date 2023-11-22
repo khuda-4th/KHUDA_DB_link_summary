@@ -1,0 +1,16 @@
+{
+    "name": "Link",
+    "version": "1.0",
+    "description": "test",
+    "manifest_version": 3,
+    "icons" : {
+        "16": "img/khuda_logo.png",
+        "48": "img/khuda_logo.png",
+        "128": "img/khuda_logo.png" 
+        },
+    "action" : {
+        "default_icon": "img/khuda_logo.png",
+        "default_title": "Link",
+        "default_popup": "popup/popup.html"
+        }
+    }
