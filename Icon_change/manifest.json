@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Image Changer Extension",
+  "version": "1.0",
+  "description": "Change icon on icon click extension",
+
+  "permissions": ["storage"],
+  "icons" : {
+    "16": "image1.png",
+    "48": "image1.png",
+    "128": "image1.png" 
+    },
+  "action": {
+    "default_icon": {
+      "16": "image1.png",
+      "48": "image1.png",
+      "128": "image1.png"
+    },
+    "default_title": "Change Icon"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
