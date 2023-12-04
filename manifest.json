@@ -1,16 +1,24 @@
 {
-    "name": "Link",
-    "version": "1.0",
-    "description": "test",
-    "manifest_version": 3,
-    "icons" : {
-        "16": "img/khuda_logo.png",
-        "48": "img/khuda_logo.png",
-        "128": "img/khuda_logo.png" 
-        },
-    "action" : {
-        "default_icon": "img/khuda_logo.png",
-        "default_title": "Link",
-        "default_popup": "popup/popup.html"
-        }
+  "manifest_version": 3,
+  "name": "Your Extension",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "/src/scripts/background.js"
+  },
+  "action": {
+    "default_popup": "/src/popup/popup.html",
+    "default_icon": {
+      "16": "/img/image1.png",
+      "48": "/img/image1.png",
+      "128": "/img/image1.png"
     }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
