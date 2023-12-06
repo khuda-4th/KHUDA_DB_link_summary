@@ -12,14 +12,13 @@ function startCrawling() {
 function processStoredData(currentURL) {
   chrome.storage.local.get(currentURL, function (data) {
     const storedData = data[currentURL];
-
+    // popup 창
     // 제목 결과 표시
     const titleElement = document.getElementById("url_title");
     titleElement.textContent = storedData.title;
     titleElement.style.display = "block";
 
     // 이미지 결과 표시
-    // 이미지 주소 가져오기
     const mainImage = storedData.image;
     const imageElement = document.getElementById("mainImage");
     imageElement.src = mainImage;
@@ -43,6 +42,8 @@ function processStoredData(currentURL) {
       }
     });
   });
+  document.getElementById("loadingContainer").style.display = "none";
+  displayPageContent();
 }
 
 // 팝업이 열릴 때의 이벤트 리스너
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.local.get(currentURL, function (data) {
       if (Object.keys(data).length > 0) {
         processStoredData(currentURL);
+        document.getElementById("loadingContainer").style.display = "none";
       } else {
         startCrawling();
       }
@@ -80,22 +82,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ... (나머지 코드는 그대로 유지)
-
-// 사용자 이벤트 핸들러 및 초기 데이터 로드
-document
-  .getElementById("loadingContainer")
-  .addEventListener("dblclick", function () {
-    // Toggle visibility of elements
-    document.getElementById("loadingContainer").style.display = "none";
-    document.getElementById("mainImage").style.display = "block";
-    document.querySelector(".url_title").style.display = "block";
-    document.getElementById("summary").style.display = "block";
-
-    document.getElementById("key1").style.display = "block";
-    document.getElementById("key2").style.display = "block";
-    document.getElementById("key3").style.display = "block";
-  });
+// 추가: 페이지 내용을 UI로 표시하는 함수
+function displayPageContent() {
+  // 예를 들어, loadingContainer를 감추고 다른 요소들을 보여주는 작업 등이 가능합니다.
+  document.getElementById("mainImage").style.display = "block";
+  document.querySelector(".url_title").style.display = "block";
+  document.getElementById("summary").style.display = "block";
+  document.getElementById("key1").style.display = "block";
+  document.getElementById("key2").style.display = "block";
+  document.getElementById("key3").style.display = "block";
+}
 
 function getTabUrl(callback) {
   var queryInfo = {
@@ -113,12 +109,3 @@ function getTabUrl(callback) {
 function renderUrl(statusText) {
   document.getElementById("result").textContent = statusText;
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var link = document.getElementById("getUrl");
-  link.addEventListener("click", function () {
-    getTabUrl(function (url) {
-      renderUrl(url);
-    });
-  });
-});
