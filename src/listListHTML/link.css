@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+html {
+  background: #ebebeb;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  overflow-y: scroll;
+  margin: 0; /* body의 기본 마진 제거 */
+  padding: 0; /* body의 기본 패딩 제거 */
+}
+
+.chrome-sample-container {
+  display: flex;
+  flex-wrap: nowrap !important; /* Prevent wrapping to the next line */
+  justify-content: flex-start; /* Add space between items */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.chrome-sample {
+  /* Add any specific styling for each chrome_sample item */
+  width: calc(
+    50% - 10px
+  ); /* Set width for each item (assuming you want two items in a row) */
+  /* Add other styles as needed */
+}
+/* .chrome_sample {
+  display: flex;
+  flex-direction: column;
+}
+.chrome-sample-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.page {
+  color: #4e4e4e;
+  font-family: "inter";
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 15px 0px 25px 0px; /* 상단, 왼쪽, 하단, 오른쪽 패딩 순서로 설정 */
+  flex-direction: column; /* 세로 방향으로 배치 */
+}
+
+header > h1 {
+  margin: 7px 0 0; /* 위쪽에 20px의 마진을 추가 */
+  color: #000;
+  font-family: Inter;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+header > h3 {
+  margin: 0 0 0 25px; /* 기본 마진을 제거 */
+  color: #484848;
+  font-size: 18px;
+}
+
+.keyword {
+  display: flex;
+  flex-wrap: wrap; /* 버튼들이 넘칠 경우 다음 줄로 넘어가도록 설정 */
+  margin-top: 10px; /* 필요에 따라 상단 여백 조절 */
+}
+
+/* button -> key */
+
+.taglist {
+  padding-top: 1em;
+  margin-top: 1em;
+  margin: 0px 30px 15px 30px; /* 상단, 왼쪽, 하단, 오른쪽 순서로 설정 */
+}
+
+.articleTitle {
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
+}
+
+a.but {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  float: left;
+  padding: 5px 25px; /* 버튼 내부 여백 설정 */
+  margin: 5px 15px 5px 0px; /* 상단, 왼쪽, 하단, 오른쪽 순서로 설정 */
+  text-align: center;
+  width: auto;
+  font-weight: 600;
+  line-height: 40px;
+  color: #434342;
+  border-radius: 25px;
+  transition: all 0.2s;
+}
+
+.btn {
+  background: #ffffff;
+}
+
+/* BORDER */
+.btn.btnBorder {
+  box-shadow: 0px 0px 0px 0px #ffffff; /* 상단, 왼쪽, 하단, 오른쪽 순서로 설정 */
+}
+
+.btn.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #ffffff; /* 상단, 왼쪽, 하단, 오른쪽 순서로 설정 */
+}
+
+/* 여기부터 크롬*/
+
+.chrome_sample {
+  border-radius: 10px;
+  width: 359.011px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  /* 요 두 줄 맞는 건지 모르겠음 */
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.contents {
+  flex: 1 1 auto;
+}
+
+.title {
+  color: #4e4e4e;
+  font-family: "inter";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.url_title a {
+  color: black; /* Set the text color to black */
+  text-decoration: none; /* Remove the underline */
+}
+
+.url_title a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+.subtitle {
+  color: #4e4e4e;
+  font-size: 17px;
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+  padding-left: 25px;
+}
+.right-aligned {
+  float: right; /* 오른쪽으로 띄우기 */
+  margin-right: 10px; /* 오른쪽 여백을 추가할 수 있습니다. */
+}
+
+.link_folder,
+.remove_folder {
+  display: flex;
+  align-items: center; /* 세로 정렬 설정 */
+  margin-left: 10px;
+}
+
+.remove_folder .text2 {
+  margin-top: 10px; /* Link List를 10픽셀 아래로 이동 */
+  margin-left: 5px;
+}
+
+.remove_folder {
+  margin-bottom: 10px;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 316.696px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin: 0.2px auto;
+  padding: 10px;
+  background: #fff;
+  flex-grow: 1;
+}
+
+.keyword2 a {
+  color: black; /* You can change 'black' to any color you prefer */
+  text-decoration: none; /* Remove the underline */
+}
+.keyword2 a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.url_title {
+  width: 297px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  margin-top: 10px;
+  width: 283.638px;
+  height: 132.753px;
+  object-fit: cover;
+}
+
+.keyword2 {
+  display: flex !important;
+  flex-wrap: wrap; /* Allow keywords to wrap to the next line */
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.tag {
+  margin: 4px; /* 간격 조절 */
+  border-radius: 57px; /* 15px 반지름으로 라운드 처리 */
+  background-color: white; /* 회색 배경색 */
+  padding: 10px 25px; /* 내용과 테두리 사이의 간격 조절 */
+}
+
+#summary {
+  display: block;
+  font-size: 13px;
+  margin-top: 5px; /* summary 위에 간격을 추가 */
+  padding: 20px;
+}
