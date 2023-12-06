@@ -1,25 +1,24 @@
 html {
   width: 359.011px;
   flex-shrink: 0;
-  background: #D9D9D9;
+  background: #d9d9d9;
   /* 요 두 줄 맞는 건지 모르겠음 */
   display: flex;
   flex-direction: column;
 }
 
 /*요것들 맞나 모르겠음*/
-.contents{
+.contents {
   display: flex;
   flex-direction: column;
-
 }
-.contents{
+.contents {
   flex: 1 1 auto;
 }
 
 .title {
-  color: #4E4E4E;
-  font-family: 'inter';
+  color: #4e4e4e;
+  font-family: "inter";
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -46,13 +45,15 @@ html {
   margin-right: 10px; /* 오른쪽 여백을 추가할 수 있습니다. */
 }
 
-.link_folder, .remove_folder {
+.link_folder,
+.remove_folder {
   display: flex;
   align-items: center; /* 세로 정렬 설정 */
   margin-left: 10px;
 }
 
-.link_folder .text, .remove_folder .text2 {
+.link_folder .text,
+.remove_folder .text2 {
   margin-top: 10px; /* Link List를 10픽셀 아래로 이동 */
   margin-left: 5px;
 }
@@ -75,14 +76,14 @@ html {
   border-radius: 10px;
   margin: 0.2px auto;
   padding: 10px;
-  background: #FFF;
+  background: #fff;
   flex-grow: 1;
 }
 
 /* Add this style to change the color of hyperlinks */
 .keyword a {
-    color: black; /* You can change 'black' to any color you prefer */
-    text-decoration: none; /* Remove the underline */
+  color: black; /* You can change 'black' to any color you prefer */
+  text-decoration: none; /* Remove the underline */
 }
 .keyword a:hover {
   text-decoration: underline; /* Add underline on hover */
@@ -96,15 +97,15 @@ html {
   margin-left: auto;
 } */
 .url_title {
-width: 297px;
-flex-shrink: 0;
- color: #000;
- font-family: 'Inter';
- font-size: 15px;
- font-style: normal;
- font-weight: 600;
- line-height: normal;
- flex-grow: 1;
+  width: 297px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  flex-grow: 1;
 }
 
 img {
@@ -135,7 +136,7 @@ img {
 } */
 
 .keyword {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap; /* Allow keywords to wrap to the next line */
   justify-content: center;
   margin: 0;
@@ -151,11 +152,9 @@ img {
   padding: 10px 25px; /* 내용과 테두리 사이의 간격 조절 */
 }
 
-
 #summary {
   display: block;
   font-size: 13px;
   margin-top: 5px; /* summary 위에 간격을 추가 */
   padding: 20px;
 }
-
